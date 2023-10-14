@@ -1,0 +1,25 @@
+.bg-tall {
+    min-height: 100vh;
+}
+
+.anchor-point {
+    height: 6vh;
+}
+
+.post-header {
+    margin-bottom: 2rem;
+    border: 5px solid whitesmoke;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.post-header-bg {
+    opacity: 0.25;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--nn-blue);
+}

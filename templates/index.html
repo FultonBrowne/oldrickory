@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% load static %}
+{% block content %}
+    <style>
+        body {
+        / / background: linear-gradient(to right, var(--neon-blue), var(--aquamarine));
+        }
+    </style>
+    <div id="clickToScroll"
+         class="container-flex d-flex flex-column justify-content-center align-items-center bg-tall">
+            <span id="text1"></span>
+            <span id="text2"></span>
+
+        <!-- The SVG filter used to create the merging effect -->
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                    <feColorMatrix in="SourceGraphic"
+                                   type="matrix"
+                                   values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140"></feColorMatrix>
+                </filter>
+            </defs>
+        </svg>
+    </div>
+
+    <script>
+        setTimeout(function () {
+            //window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+        }, 5000);
+    </script>
+    <script src="{% static 'scripts/morph.js' %}"></script>
+{% endblock %}

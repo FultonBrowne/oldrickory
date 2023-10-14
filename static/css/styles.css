@@ -1,0 +1,135 @@
+:root {
+    --bright-pink-crayola: #ff6173ff;
+    --maize: #fff175ff;
+    --aquamarine: #0affd6ff;
+    --rich-black: #001011ff;
+    --neon-blue: #525dffff;
+}
+
+.home-text{
+        max-width: 50%;
+}
+
+
+.bg-theme01 {
+    background: var(--bright-pink-crayola);
+}
+
+.bg-theme02 {
+    background: var(--maize);
+}
+
+.bg-theme03 {
+    background: var(--aquamarine);
+}
+
+.bg-theme04 {
+    background: var(--neon-blue);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 75vh;
+}
+
+.screen-box {
+    padding: 1%;
+    background-color: rgb(33,37,41);
+    height: 100vh;
+
+}
+
+.nav-pill {
+    background-color: var(--neon-blue) !important;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+    .nav-pill {
+        border-radius: 25px;
+    }
+    .home-text{
+        max-width: 100%;
+}
+
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+.keyhole-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+
+    text-align: center;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .nn-gradient-text, .nn-gradient-text-animate {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.anchor-point {
+    height: 50px;
+}
+
+
+.text-justify {
+    text-align: justify;
+!important
+}
+
+.fade-container {
+  opacity: 0;
+  transition: visibility 0s linear 1s, opacity 1s ease-in-out;
+}
+
+.fade-container.active {
+  opacity: 1;
+  transition: visibility 0.3s linear 1s, opacity 1s ease-in-out;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for transparency */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px; /* Adjust the value for button roundness */
+  opacity: 0.8; /* Adjust the value for button transparency */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for transform and opacity */
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.button-text{
+    visibility: hidden;
+}
+.button-text:hover{
+    visibility: visible;
+}
+
+.social-icons{
+    font-size: large;
+}

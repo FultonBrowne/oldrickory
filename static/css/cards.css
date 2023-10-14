@@ -1,0 +1,42 @@
+.card {
+    transition: all 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.card-highlight:hover {
+    border-color: var(--aquamarine);
+    box-shadow: 0 0 15px var(--bright-pink-crayola);
+}
+
+.highlight {
+    color: var(--aquamarine);
+}
+
+.nn-gradient-text {
+    background: var(--bright-pink-crayola);
+    background: linear-gradient(to right, var(--neon-blue), var(--aquamarine));;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.keyhole .cls-1 {
+    fill: black;
+    transition: all 0.3s ease-in;
+}
+
+.keyhole:hover .cls-1 {
+    fill: #260e0e;
+}
+/*Create the blinking animation by simply hide the element.*/
+@keyframes blink {
+    to{
+        visibility: hidden;
+    }
+
+}
