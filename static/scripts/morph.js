@@ -3,7 +3,6 @@
 */
 
 let baseFontSize = 16;  // This is a starting value; adjust as needed.
-
 const elts = {
 	text1: document.getElementById("text1"),
 	text2: document.getElementById("text2")
@@ -20,7 +19,7 @@ const texts = [
 ];
 
 // Controls the speed of morphing.
-const morphTime = 0.75;
+const morphTime = 1;
 const cooldownTime = 0.25;
 
 let textIndex = texts.length - 1;
@@ -30,7 +29,8 @@ let cooldown = cooldownTime;
 
 elts.text1.textContent = texts[textIndex % texts.length];
 elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-
+elts.text1.style.opacity = "0"
+elts.text2.style.opacity = "0"
 function doMorph() {
 	morph -= cooldown;
 	cooldown = 0;
@@ -60,6 +60,8 @@ function setMorph(fraction) {
 	elts.text2.textContent = texts[(textIndex + 1) % texts.length];
 	elts.text1.style.fontSize = `${baseFontSize}px`;
     elts.text2.style.fontSize = `${baseFontSize}px`;
+
+
 }
 
 function doCooldown() {
@@ -79,7 +81,6 @@ function animate() {
 		window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
         return;
     }
-
 	requestAnimationFrame(animate);
 
 	let newTime = new Date();
@@ -88,12 +89,14 @@ function animate() {
 	time = newTime;
 
 	cooldown -= dt;
-
 	if (cooldown <= 0) {
 		if (shouldIncrementIndex) {
+			console.log("test")
+			audio.pause()
+			audio.currentTime = 0;
+			audio.play()
 			textIndex++;
 		}
-
 		doMorph();
 	} else {
 		doCooldown();
@@ -102,4 +105,10 @@ function animate() {
 }
 
 // Start the animation.
-animate();
+
+function go(){
+	document.getElementById("start").style.opacity = "0"
+	elts.text1.style.opacity = "1"
+	elts.text2.style.opacity = "1"
+	animate();
+}

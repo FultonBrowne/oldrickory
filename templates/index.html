@@ -9,6 +9,7 @@
     </style>
     <div id="clickToScroll"
          class="container-flex d-flex flex-column justify-content-center align-items-center bg-tall">
+
             <span id="text1"></span>
             <span id="text2"></span>
 
@@ -26,12 +27,17 @@
                 </filter>
             </defs>
         </svg>
+    <button class="button" onclick="go()" id="start">click to start</button>
     </div>
 
     <script>
         setTimeout(function () {
             //window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
         }, 5000);
+    </script>
+    <script>
+        let audio = new Audio("{% static 'audio/boom.wav'%}");
+
     </script>
     <script src="{% static 'scripts/morph.js' %}"></script>
 {% endblock %}
