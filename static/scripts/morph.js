@@ -78,7 +78,8 @@ function doCooldown() {
 function animate() {
 	if (textIndex >= (texts.length * 2) - 1) {
 		// Stop once we've gone through all the texts
-		window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+		//window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+		window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
         return;
     }
 	requestAnimationFrame(animate);
